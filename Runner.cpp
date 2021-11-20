@@ -5,6 +5,8 @@
 #include"Storyboard.h"
 #include"Storyboard.cpp"
 #include "Runner.h"
+#include<limits>
+#include<bits/stdc++.h>
 
 
 using namespace std;
@@ -40,10 +42,18 @@ void Runner::runApplication(){
     int numberChoose;
     cin>>numberChoose;
 
-    while(typeid(numberChoose).name()=="i"){
-        cout<<" Introduce the number"<<endl;
-        cin>>numberChoose;
-    }
+    while(1){
+      if(cin.fail(){
+           cin.ignore(numeric_limits<streamsize>::max(),’\n’);
+           cout<<"Enter the number"<<endl;
+           cin>>numberChoose;
+           
+      }
+         if(!cin.fail()){
+              break;
+         }
+      }
+    
 
     switch(numberChoose){
         case 1:
@@ -66,10 +76,17 @@ void Runner::runApplication(){
 
                 int secondOption;
                 cin>>secondOption;
-                while(typeid(secondOption).name()=="i"){
-                        cout<<"Introduce the number"<<endl;
-                        cin>>secondOption;
-                }
+                while(1){
+                   if(cin.fail(){
+                     cin.ignore(numeric_limits<streamsize>::max(),’\n’);
+                     cout<<"Enter the number"<<endl;
+                     cin>>secondOption;
+           
+      }
+         if(!cin.fail()){
+              break;
+         }
+      }
 
                 switch(secondOption){
                     case 1: 
@@ -91,14 +108,21 @@ void Runner::runApplication(){
             
     }
 
-    cout<<"Do you use to continue?"<<endl;
+    cout<<"Do you use to continue? 1= Yes, 2 = No"<<endl;
     int continueOption ;
     cin>>continueOption;
 
-    while(typeid(continueOption).name()=="i"){
-            cout<<"Introduce the number"<<endl;
-            cin>>continueOption;
-    }
+      while(1){
+                  if(cin.fail(){
+                  cin.ignore(numeric_limits<streamsize>::max(),’\n’);
+                  cout<<"Enter the number"<<endl;
+                  cin>>continueOption;
+           
+      }
+         if(!cin.fail()){
+              break;
+         }
+      }
     if(continueOption ==1){
         continue;
     }else{
